@@ -1,0 +1,26 @@
+# Dependencies and build output
+frontend/node_modules
+backend/target
+
+# The built website. Regenerate with: cd frontend && npm run build
+backend/src/main/resources/static
+
+# IDE
+.idea
+*.iml
+
+# Secrets
+.env
+
+# Environment files (keep examples committed)
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+backend/.env
+
+# Local secrets (the .example file stays tracked)
+backend/config/*.properties
+!backend/config/*.properties.example
+backend/src/main/resources/application-local.properties
