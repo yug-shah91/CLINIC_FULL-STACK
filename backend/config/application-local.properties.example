@@ -1,0 +1,12 @@
+# Local development settings. Copy this file to  application-local.properties  (same folder).
+# The real file is git-ignored and sits OUTSIDE src/main/resources on purpose, so it is never
+# packaged into the jar. Spring Boot reads ./config/ relative to the working directory, so run
+# from the backend folder:
+#   Terminal: SPRING_PROFILES_ACTIVE=local ./mvnw spring-boot:run
+#   IntelliJ: Active profiles = local, Working directory = <project>/backend
+spring.datasource.password=change-me
+jwt.secret=change-me-to-a-random-value-of-48-or-more-characters
+
+# Optional first doctor account (created only if no admin exists; password 12+ characters)
+# app.admin.email=doctor@example.com
+# app.admin.password=change-me-please-12+
