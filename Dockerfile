@@ -10,7 +10,7 @@ WORKDIR /app
 COPY backend/pom.xml .
 COPY backend/src ./src
 COPY --from=web /app/backend/src/main/resources/static ./src/main/resources/static
-RUN mvn -q package -DskipTests
+RUN mvn -B package -Dmaven.test.skip=true
 
 FROM eclipse-temurin:17-jre
 WORKDIR /app
